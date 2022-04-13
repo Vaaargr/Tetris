@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Тетрис</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<title id>Tetris Challenge</title>
+<body >
+<h2>Тетрис</h2>
+<button id="instructions">Инструкции</button>
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>
+            ⬅️ Стрелка влево: двигает фигуру влево.<br>
+            ➡️ Стрелка вправо: двигает фигуру вправо.<br>
+            ⬇️ Стрелка вниз: ускоряет падение.<br>
+            Кнопки A и D: вращают фигуру.<br>
+            Задача игры - набрать как можно больше очков.<br>
+            Очки начисляются за полностью заполненную горизонтальную линию.<br>
+            После заполнения линия исчезает.
+        </p>
+    </div>
+</div>
+
+<div id="button-container">
+    <button id="start">Старт</button>
+    <button id="reset">Сброс</button>
+    <h3>Счёт:<span id="score">0</span></h3>
+</div>
+<form id="set" autocomplete='off'>
+    <h3>Параметры игры</h3>
+    <h4>Ширина: <input type="number" value="12" id="width" min="10" max="20"></h4>
+    <h4>Высота: <input type="number" value="20" id="height" min="15" max="35"></h4>
+    <h3>Размер квадрата: <input type="number" value="20" id="size" min="5" max="40" step="5"></h3>
+</form>
+<canvas id="tetris" width="200" height="200" hidden>
+    <script src="tetris.js"></script>
+</canvas>
+</body>
+</html>
